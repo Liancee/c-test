@@ -26,12 +26,28 @@ int main()
             GetString(width, true);
         }
     }
-    /*std::string food = "Hamburger";
-    std::string* ptr = &food;
-    std::cout << ptr;
-    std::cout << "\n";
-    *ptr = "Pizza";
-    std::cout << *ptr;*/
+    /*// references
+    string food = "Pizza";
+    string &meal = food;
+    meal = "Burger";
+    cout << food << endl;
+    
+    // pointer
+    string food = "Pizza";
+    string* ptr = &food;
+    // Output the value of food (Pizza)
+    cout << food << "\n";
+    // Output the memory address of food (0x6dfed4)
+    cout << &food << "\n";
+    // Access the memory address of food and output its value (Pizza)
+    cout << *ptr << "\n";
+    // Change the value of the pointer
+    *ptr = "Hamburger";
+    // Output the new value of the pointer (Hamburger)
+    cout << *ptr << "\n";
+    // Output the new value of the food variable (Hamburger)
+    cout << food << "\n";*/
+    
     return 0;
 }
 
@@ -51,7 +67,6 @@ void GetString(int width, bool inner) {
         for (int i = 0; i < width; i++) {
             cout << 'A';
         }
-        
     }
     cout << endl;
 }
