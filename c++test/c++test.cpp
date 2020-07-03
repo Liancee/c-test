@@ -6,7 +6,7 @@
 
 using namespace std;
 
-string GetString(int width, bool inner = false);
+void GetString(int width, bool inner = false);
 
 int main()
 {
@@ -35,7 +35,7 @@ int main()
     return 0;
 }
 
-string GetString(int width, bool inner) {
+void GetString(int width, bool inner) {
     if (inner) {
         for (int i = 0; i < width; i++) {
             if (i == 0 || i == width - 1) {
@@ -46,14 +46,14 @@ string GetString(int width, bool inner) {
             }
             //(i == 0 || i == width - 1) ? cout << 'A' : cout << 'B';
         }
-        cout << endl;
     }
     else {
         for (int i = 0; i < width; i++) {
             cout << 'A';
         }
-        cout << endl;
+        
     }
+    cout << endl;
 }
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
