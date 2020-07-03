@@ -4,16 +4,57 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
+string GetString(int width, bool inner = false);
+
 int main()
 {
-    std::string food = "Hamburger";
+    //cout << "Type width";
+    //cin >> stoi(width);
+    string strWidth = "5";
+    int width = stoi(strWidth);
+    //cout << "Type height";
+    //cin >> stoi(height);
+    string strHeight = "7";
+    int height = stoi(strHeight);
+    for (int i = 0; i < height; i++) {
+        if (i == 0 || i == height - 1) {
+            GetString(width);
+        }
+        else {
+            GetString(width, true);
+        }
+    }
+    /*std::string food = "Hamburger";
     std::string* ptr = &food;
     std::cout << ptr;
     std::cout << "\n";
     *ptr = "Pizza";
-    std::cout << *ptr;
+    std::cout << *ptr;*/
+    return 0;
 }
 
+string GetString(int width, bool inner) {
+    if (inner) {
+        for (int i = 0; i < width; i++) {
+            if (i == 0 || i == width - 1) {
+                cout << 'A';
+            }
+            else {
+                cout << 'B';
+            }
+            //(i == 0 || i == width - 1) ? cout << 'A' : cout << 'B';
+        }
+        cout << endl;
+    }
+    else {
+        for (int i = 0; i < width; i++) {
+            cout << 'A';
+        }
+        cout << endl;
+    }
+}
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
